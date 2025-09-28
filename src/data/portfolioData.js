@@ -95,24 +95,24 @@ export const portfolioData = {
     {
       id: 2,
       title: "Smart TV & Applications",
-      description: "Developed AI-enhanced Smart TV applications with voice recognition, intelligent content recommendations, and ML-powered personalization features for LG webOS 24. Integrated NLP for natural language interactions.",
+      description: "Developed interactive Smart TV applications with modern UI components, content management systems, and user-friendly interfaces for LG webOS 24. Built comprehensive settings, channel management, and picture wizard applications.",
       image: "./images/projects/webos-tv-apps.svg",
-      technologies: ["EnactJS", "React.js", "AI/ML", "NLP", "Redux Toolkit", "Node.js", "Docker", "DB8"],
+      technologies: ["EnactJS", "React.js", "Redux Toolkit", "Node.js", "Docker", "DB8", "JavaScript"],
       githubUrl: "https://github.com/ravi1122",
       liveUrl: "",
       featured: true,
-      aiPowered: true
+      aiPowered: false
     },
     {
       id: 3,
       title: "IoT Analytics Dashboard",
-      description: "Comprehensive IoT monitoring dashboard enhanced with AI-powered predictive maintenance, anomaly detection, and intelligent alerting systems. Implemented ML models for pattern recognition and automated decision making.",
+      description: "Comprehensive IoT monitoring dashboard with real-time data visualization, device management, and system monitoring capabilities. Features interactive charts, alerting systems, and comprehensive reporting tools.",
       image: "./images/projects/iot-dashboard.svg",
-      technologies: ["React.js", "Node.js", "Machine Learning", "TensorFlow", "OAuth", "JWT", "Docker", "Azure AI"],
+      technologies: ["React.js", "Node.js", "Chart.js", "WebSockets", "OAuth", "JWT", "Docker", "Azure"],
       githubUrl: "https://github.com/ravi1122",
       liveUrl: "",
       featured: true,
-      aiPowered: true
+      aiPowered: false
     },
     {
       id: 4,

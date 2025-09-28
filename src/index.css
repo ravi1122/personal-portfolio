@@ -553,3 +553,65 @@ img {
     text-shadow: none !important;
   }
 }
+
+/* Text truncation utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Enhanced line-clamp utilities for Projects component */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Project card enhancements */
+.project-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Ensure proper spacing on mobile devices */
+@media (max-width: 640px) {
+  .project-card {
+    margin-bottom: 1rem;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-2px) scale(1.01);
+  }
+}
+
+/* Technology badge improvements */
+.tech-badge {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+/* Improved gradient backgrounds for better contrast */
+.gradient-bg-1 { background: linear-gradient(135deg, #3b82f6, #6366f1, #8b5cf6); }
+.gradient-bg-2 { background: linear-gradient(135deg, #10b981, #14b8a6, #06b6d4); }
+.gradient-bg-3 { background: linear-gradient(135deg, #f59e0b, #ef4444, #ec4899); }
+.gradient-bg-4 { background: linear-gradient(135deg, #8b5cf6, #7c3aed, #6366f1); }
+.gradient-bg-5 { background: linear-gradient(135deg, #10b981, #14b8a6, #06b6d4); }
+.gradient-bg-6 { background: linear-gradient(135deg, #eab308, #f59e0b, #ef4444); }
