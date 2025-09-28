@@ -189,11 +189,11 @@ Replace the placeholder experience and education data in `portfolioData.js` with
 #### **Automatic Deployment (Recommended)**
 The project is already configured with GitHub Actions for automatic deployment:
 
-1. **Push to main/master/develop branch**
+1. **Push to main/master branch**
    ```bash
    git add .
    git commit -m "Deploy portfolio"
-   git push origin develop  # or main/master
+   git push origin main  # or master
    ```
 
 2. **GitHub Actions will automatically**
