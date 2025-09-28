@@ -1,0 +1,30 @@
+# CODEOWNERS file for professional-portfolio
+# This file defines who owns what in the repository
+# More info: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global ownership - ravi1122 owns everything by default
+* @ravi1122
+
+# Source code ownership
+/src/ @ravi1122
+/src/components/ @ravi1122
+/src/data/ @ravi1122
+/src/hooks/ @ravi1122
+/src/utils/ @ravi1122
+
+# Configuration files
+package.json @ravi1122
+package-lock.json @ravi1122
+tailwind.config.js @ravi1122
+postcss.config.js @ravi1122
+
+# Public assets
+/public/ @ravi1122
+
+# Build configuration
+/build/ @ravi1122
+build-optimized.sh @ravi1122
+
+# Documentation
+README.md @ravi1122
+git-workflow.md @ravi1122
