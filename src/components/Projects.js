@@ -1,7 +1,6 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import portfolioData from '../data/portfolioData';
-import OptimizedImage from './OptimizedImage';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
@@ -81,6 +80,8 @@ const Projects = () => {
   console.log('Filtered Projects:', filteredProjects); // Debug log
 
   const ProjectCard = React.memo(({ project, index }) => {
+    console.log(`Project ${project.title} - Image path:`, project.image); // Debug log
+    
     return (
       <motion.div
         variants={cardVariants}
@@ -91,19 +92,18 @@ const Projects = () => {
         {/* Project Image */}
         <div className="relative h-64 overflow-hidden">
           {project.image ? (
-            <OptimizedImage
+            <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full transition-transform duration-500 group-hover:scale-110"
-              placeholder="skeleton"
-              aspectRatio="16/9"
-              priority={true} // Set all project images as priority for mobile compatibility
-              fallbackSrc={`${process.env.PUBLIC_URL}/images/profile.svg`} // Use our existing fallback
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="eager"
               onLoad={() => {
                 console.log(`✓ Image loaded: ${project.title}`);
               }}
               onError={(e) => {
-                console.warn(`✗ Failed to load image for ${project.title}:`, e);
+                console.warn(`✗ Failed to load image for ${project.title}:`, project.image);
+                // Fallback to placeholder
+                e.target.src = "./images/profile.svg";
               }}
             />
           ) : (

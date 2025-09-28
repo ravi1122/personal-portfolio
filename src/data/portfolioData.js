@@ -10,9 +10,9 @@ export const portfolioData = {
     linkedin: "https://linkedin.com/in/raviranjan946",
     github: "https://github.com/ravi1122",
     location: "India",
-    avatar: `${process.env.PUBLIC_URL}/Mine.jpg`, // Your actual profile image
-    resumeUrl: `${process.env.PUBLIC_URL}/Resume.docx`, // Your resume file
-    certificateUrl: `${process.env.PUBLIC_URL}/Ravi_Ranjan_Certificate.pdf` // AI Master class certificate
+    avatar: "./Mine.jpg", // Your actual profile image
+    resumeUrl: "./Resume.docx", // Your resume file
+    certificateUrl: "./Ravi_Ranjan_Certificate.pdf" // AI Master class certificate
   },
 
   // About section
@@ -85,7 +85,7 @@ export const portfolioData = {
       id: 1,
       title: "AI-Powered E-commerce Platform (ECP & CP4L)",
       description: "Architected next-gen e-commerce platforms using MACH architecture with integrated AI recommendations, intelligent search, and ML-driven personalization. Implemented headless commerce on AWS with AI/ML services for predictive analytics.",
-      image: `${process.env.PUBLIC_URL}/images/projects/ecommerce-platform.svg`,
+      image: "./images/projects/ecommerce-platform.svg",
       technologies: ["Next.js", "React.js", "AI/ML", "GraphQL", "Node.js", "AWS SageMaker", "Commerce Tools", "Algolia", "TypeScript"],
       githubUrl: "https://github.com/ravi1122",
       liveUrl: "",
@@ -96,7 +96,7 @@ export const portfolioData = {
       id: 2,
       title: "Smart TV & Applications",
       description: "Developed AI-enhanced Smart TV applications with voice recognition, intelligent content recommendations, and ML-powered personalization features for LG webOS 24. Integrated NLP for natural language interactions.",
-      image: `${process.env.PUBLIC_URL}/images/projects/webos-tv-apps.svg`,
+      image: "./images/projects/webos-tv-apps.svg",
       technologies: ["EnactJS", "React.js", "AI/ML", "NLP", "Redux Toolkit", "Node.js", "Docker", "DB8"],
       githubUrl: "https://github.com/ravi1122",
       liveUrl: "",
@@ -107,7 +107,7 @@ export const portfolioData = {
       id: 3,
       title: "IoT Analytics Dashboard",
       description: "Comprehensive IoT monitoring dashboard enhanced with AI-powered predictive maintenance, anomaly detection, and intelligent alerting systems. Implemented ML models for pattern recognition and automated decision making.",
-      image: `${process.env.PUBLIC_URL}/images/projects/iot-dashboard.svg`,
+      image: "./images/projects/iot-dashboard.svg",
       technologies: ["React.js", "Node.js", "Machine Learning", "TensorFlow", "OAuth", "JWT", "Docker", "Azure AI"],
       githubUrl: "https://github.com/ravi1122",
       liveUrl: "",
@@ -118,7 +118,7 @@ export const portfolioData = {
       id: 4,
       title: "Computer Vision Autonomous Vehicle Dashboard",
       description: "Engineered cutting-edge dashboard with advanced computer vision algorithms, real-time object detection, and AI-powered decision making for autonomous vehicle perception with 360-degree camera integration.",
-      image: `${process.env.PUBLIC_URL}/images/projects/av-dashboard.svg`,
+      image: "./images/projects/av-dashboard.svg",
       technologies: ["React.js", "Node.js", "Computer Vision", "OpenCV", "TensorFlow", "REST APIs", "Real-time AI"],
       githubUrl: "https://github.com/ravi1122",
       liveUrl: "",
@@ -129,7 +129,7 @@ export const portfolioData = {
       id: 5,
       title: "E-commerce Platform Components",
       description: "Developed comprehensive React components for Meijer's e-commerce platform including checkout module, product listing pages (PLP, DLP, SLP, CLP), shopping cart functionality, and user account management with robust form validation.",
-      image: `${process.env.PUBLIC_URL}/images/projects/meijer-ecommerce.svg`,
+      image: "./images/projects/meijer-ecommerce.svg",
       technologies: ["React.js", "JavaScript", "CSS3", "Form Validation", "Redux", "REST APIs"],
       githubUrl: "https://github.com/ravi1122",
       liveUrl: "",
@@ -140,7 +140,7 @@ export const portfolioData = {
       id: 6,
       title: "AI Chatbot & Virtual Assistant",
       description: "Built intelligent conversational AI using Large Language Models and advanced NLP techniques. Features include context-aware responses, multi-language support, and integration with business systems.",
-      image: `${process.env.PUBLIC_URL}/images/projects/ecommerce-platform.svg`, // Using available image as fallback
+      image: "./images/projects/ecommerce-platform.svg", // Using available image as fallback
       technologies: ["React.js", "Node.js", "OpenAI GPT", "LangChain", "NLP", "Python", "Vector Databases"],
       githubUrl: "https://github.com/ravi1122",
       liveUrl: "",
