@@ -1,13 +1,22 @@
 import { useEffect, useState } from 'react';
 
 // Hook for Intersection Observer with performance optimizations
-export const useIntersectionObserver = (threshold = 0.1, rootMargin = '50px') => {
+export const useIntersectionObserver = (threshold = 0.1, rootMargin = '100px') => {
   const [ref, setRef] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
   const [hasBeenVisible, setHasBeenVisible] = useState(false);
 
   useEffect(() => {
     if (!ref) return;
+
+    // Check if element is already visible (for mobile compatibility)
+    const rect = ref.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    if (rect.top < windowHeight && rect.bottom > 0) {
+      setIsVisible(true);
+      setHasBeenVisible(true);
+      return;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {

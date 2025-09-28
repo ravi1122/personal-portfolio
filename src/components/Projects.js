@@ -97,7 +97,7 @@ const Projects = () => {
               className="w-full h-full transition-transform duration-500 group-hover:scale-110"
               placeholder="skeleton"
               aspectRatio="16/9"
-              priority={index < 3} // Prioritize first 3 images
+              priority={true} // Set all project images as priority for mobile compatibility
               fallbackSrc={`${process.env.PUBLIC_URL}/images/profile.svg`} // Use our existing fallback
               onLoad={() => {
                 console.log(`✓ Image loaded: ${project.title}`);

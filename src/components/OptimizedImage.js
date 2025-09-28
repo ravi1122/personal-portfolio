@@ -60,10 +60,21 @@ const OptimizedImage = ({
 
   // Handle intersection observer and SVG immediate loading
   useEffect(() => {
-    if (isVisible || priority || isSvg) {
+    // For project images and SVGs, load immediately to avoid mobile issues
+    if (isVisible || priority || isSvg || src?.includes('/images/projects/')) {
       setCurrentSrc(src);
+    } else {
+      // Fallback timeout for mobile devices where intersection observer might fail
+      const fallbackTimer = setTimeout(() => {
+        if (!currentSrc && src) {
+          console.log('Fallback loading image:', src);
+          setCurrentSrc(src);
+        }
+      }, 2000); // Load after 2 seconds if not loaded yet
+
+      return () => clearTimeout(fallbackTimer);
     }
-  }, [isVisible, src, priority, isSvg]);
+  }, [isVisible, src, priority, isSvg, currentSrc]);
 
   // Handle image loading
   const handleLoad = () => {
