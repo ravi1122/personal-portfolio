@@ -98,7 +98,7 @@ const Projects = () => {
               placeholder="skeleton"
               aspectRatio="16/9"
               priority={index < 3} // Prioritize first 3 images
-              fallbackSrc="/images/profile.svg" // Use our existing fallback
+              fallbackSrc={`${process.env.PUBLIC_URL}/images/profile.svg`} // Use our existing fallback
               onLoad={() => {
                 console.log(`✓ Image loaded: ${project.title}`);
               }}

@@ -20,8 +20,9 @@ const Navbar = () => {
       const element = document.querySelector(href);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
-        // Update URL without page reload
-        window.history.pushState({}, '', '/');
+        // Update URL without page reload - keep current path for GitHub Pages
+        const currentPath = window.location.pathname;
+        window.history.pushState({}, '', currentPath);
       }
     } catch (error) {
       console.warn('Error scrolling to section:', error);
@@ -34,8 +35,9 @@ const Navbar = () => {
       const element = document.querySelector('#home');
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
-        // Clear URL and set to root
-        window.history.pushState({}, '', '/');
+        // Keep current path for GitHub Pages
+        const currentPath = window.location.pathname;
+        window.history.pushState({}, '', currentPath);
       }
     } catch (error) {
       console.warn('Error scrolling to home:', error);
