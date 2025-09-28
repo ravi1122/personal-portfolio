@@ -2,6 +2,7 @@
   "name": "personal-portfolio",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://ravi1122.github.io/professional-portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -23,7 +24,11 @@
     "test:coverage": "react-scripts test --coverage --no-watch",
     "eject": "react-scripts eject",
     "performance:audit": "lighthouse http://localhost:3000 --only-categories=performance --chrome-flags=\"--headless\"",
-    "performance:monitor": "node -e \"console.log('Check browser dev tools for performance monitoring data')\""
+    "performance:monitor": "node -e \"console.log('Check browser dev tools for performance monitoring data')\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "deploy:netlify": "npm run build && npx netlify deploy --prod --dir=build",
+    "deploy:vercel": "npm run build && npx vercel --prod"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +50,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2"
   }

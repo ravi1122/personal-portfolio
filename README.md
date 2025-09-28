@@ -186,26 +186,50 @@ Replace the placeholder experience and education data in `portfolioData.js` with
 
 ### **GitHub Pages**
 
-1. **Install gh-pages**
+#### **Automatic Deployment (Recommended)**
+The project is already configured with GitHub Actions for automatic deployment:
+
+1. **Push to main/master/develop branch**
    ```bash
-   npm install --save-dev gh-pages
+   git add .
+   git commit -m "Deploy portfolio"
+   git push origin develop  # or main/master
    ```
 
-2. **Add to package.json**
-   ```json
-   {
-     "homepage": "https://yourusername.github.io/portfolio",
-     "scripts": {
-       "predeploy": "npm run build",
-       "deploy": "gh-pages -d build"
-     }
-   }
-   ```
+2. **GitHub Actions will automatically**
+   - Build your project
+   - Deploy to GitHub Pages
+   - Your site will be live at: `https://yourusername.github.io/repository-name`
 
-3. **Deploy**
+#### **Manual Deployment**
+If you prefer manual deployment:
+
+1. **The project already has gh-pages configured**
+   - `gh-pages` package is installed
+   - Deploy scripts are added to `package.json`
+   - Homepage URL is configured
+
+2. **Deploy using npm**
    ```bash
    npm run deploy
    ```
+
+3. **Or use the PowerShell script**
+   ```powershell
+   .\deploy.ps1
+   ```
+
+4. **Your portfolio will be live at**
+   ```
+   https://ravi1122.github.io/professional-portfolio
+   ```
+
+#### **GitHub Pages Setup**
+1. Go to your GitHub repository
+2. Navigate to Settings → Pages
+3. Under "Source", select "Deploy from a branch"
+4. Choose "gh-pages" branch
+5. Click Save
 
 ## 🎨 Customization Options
 
